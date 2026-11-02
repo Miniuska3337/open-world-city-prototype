@@ -130,11 +130,6 @@ canvas {
   height: 2px;
 }
 
-#crosshair span {
-  position: absolute;
-  inset: 0;
-}
-
 #crosshair span::before,
 #crosshair span::after {
   width: 8px;

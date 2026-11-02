@@ -4,13 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>City Open World</title>
-    <meta
-      name="description"
-      content="Open-world 3D city prototype built from scratch with Three.js."
-    />
+    <meta name="description" content="Open-world 3D city prototype built from scratch with Three.js." />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <div id="hud">
+        <div id="topbar">
+          <div id="stats" class="panel">
+            <div class="stat"><span class="label">HP</span><span id="hp-value" class="value">100</span></div>
+            <div class="stat"><span class="label">Money</span><span id="money-value" class="value">$2500</span></div>
+            <div class="stat"><span class="label">Wanted</span><span id="wanted-value" class="value">0</span></div>
+            <div class="stat"><span class="label">Speed</span><span id="speed-value" class="value">0 km/h</span></div>
+            <div class="stat"><span class="label">Vehicle</span><span id="vehicle-value" class="value">On Foot</span></div>
+          </div>
+
+          <div id="mission-panel" class="panel">
+            <h2 id="mission-title">Mission</h2>
+            <p id="mission-text">Reach the downtown marker and earn a payout.</p>
+          </div>
+        </div>
+
+        <div id="center">
+          <div id="crosshair"><span></span></div>
+        </div>
+
+        <div id="bottom-bar">
+          <div id="inventory" class="panel">
+            <div class="slot active">Pist.</div>
+            <div class="slot">SMG</div>
+            <div class="slot">Med</div>
+            <div class="slot">Gear</div>
+          </div>
+
+          <div id="message">Mission started.</div>
+        </div>
+
+        <div id="minimap-wrap">
+          <canvas id="minimap" width="190" height="190"></canvas>
+        </div>
+
+        <div id="help" class="panel">
+          W/A/S/D move · Shift sprint · Space jump · Ctrl crouch · E interact · F enter vehicle · LMB shoot
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
